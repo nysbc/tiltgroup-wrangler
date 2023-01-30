@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+set -u
+
+_file_=$(realpath "$0")
+root="$(dirname "$_file_")"
+
+cd "$root"
+poetry run python tiltgroup_wrangler_cli.py "$@"
